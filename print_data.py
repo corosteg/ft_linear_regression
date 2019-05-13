@@ -1,8 +1,8 @@
 import sys
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 # import numpy as np
 
-Alpha = 0.0000000001
+Alpha = 0.00001
 
 def open_and_read_file(file):
     try:
@@ -71,8 +71,8 @@ if __name__ == "__main__":
         except:
             pass
 
-    # x = [1, 2, 3, 4, 5]
-    # y = [1, 2, 3, 8, 9]
+    x = [1, 2, 3, 4, 5]
+    y = [1, 2, 3, 4, 5]
 
     x_normalized = normalizer(x[:])
     y_normalized = normalizer(y[:])
@@ -114,3 +114,4 @@ if __name__ == "__main__":
 
     plt.title("Linear Regression")
     plt.show()
+    
