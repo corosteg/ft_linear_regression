@@ -57,10 +57,13 @@ if __name__ == "__main__":
     file.write("\n")
     file.write(str(theta_1))
 
-    plt.scatter(x, y)
-    plt.plot(x, y_finalpred)
+    print_graph = input("Do you want to see graph of linear regression (y/n)? ")
 
-    plt.xlabel('Mile age (in km)')
-    plt.ylabel('Price (in euro)')
-    plt.title("Linear Regression")
-    plt.show()
+    if print_graph == "y" or print_graph == "yes":
+        plt.scatter(x, y)
+        plt.plot(x, y_finalpred)
+
+        plt.xlabel('Mile age (in km)')
+        plt.ylabel('Price (in euro)')
+        plt.title("Linear Regression")
+        plt.show()
