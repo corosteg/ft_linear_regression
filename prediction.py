@@ -12,4 +12,4 @@ if __name__ == "__main__":
     
     x = input("Enter the KM of your car: ")
     x = int(x)
-    print("\nHis cost are: ", x * theta_1 + theta_0)
+    print("\nHis cost are: ", round(x * theta_1 + theta_0, 2))
