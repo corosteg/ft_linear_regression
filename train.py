@@ -14,7 +14,7 @@ def open_and_read_file(argv):
     try:
         fd = open(argv[1], "r")
     except:
-        print('ft_linear_regression a file with read permission in argument')
+        print("ft_linear_regression a file with read permission in argument")
         sys.exit(1)
 
     return fd.read()
@@ -41,17 +41,21 @@ if __name__ == "__main__":
     x_norm = normalizer(x[:])
     y_norm = normalizer(y[:])
 
-    (theta_0, theta_1) = linear_regression(x_norm, y_norm)
+    theta_0, theta_1 = linear_regression(x_norm, y_norm)
 
     ypred = []
     for value in x_norm:
         ypred.append(theta_0 + theta_1 * value)
-
     y_finalpred = []
     y_finalpred = denormalizer(ypred, y)
 
     theta_1 = (y_finalpred[1] - y_finalpred[0]) / (x[1] - x[0])
     theta_0 = y_finalpred[0] - x[0] * theta_1
+    
+    file = open("values","w")
+    file.write(str(theta_0))
+    file.write("\n")
+    file.write(str(theta_1))
 
     plt.scatter(x, y)
     plt.plot(x, y_finalpred)
