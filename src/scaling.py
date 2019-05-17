@@ -9,7 +9,7 @@ def calcul_deviation_average(arr):
 
     for value in arr:
         deviation = deviation + ((value - average) ** 2)
-    
+
     deviation = deviation ** 0.5
 
     return average, deviation

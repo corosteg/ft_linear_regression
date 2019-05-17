@@ -52,7 +52,7 @@ if __name__ == "__main__":
     theta_1 = (y_finalpred[1] - y_finalpred[0]) / (x[1] - x[0])
     theta_0 = y_finalpred[0] - x[0] * theta_1
     
-    file = open("values","w")
+    file = open("values", "w")
     file.write(str(theta_0))
     file.write("\n")
     file.write(str(theta_1))
